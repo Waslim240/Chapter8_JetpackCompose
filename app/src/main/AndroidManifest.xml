@@ -10,6 +10,46 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.JetpackCompose">
         <activity
+            android:name=".selasa.latihanappnote.HomeLayout"
+            android:exported="false"
+            android:label="@string/title_activity_home_layout"
+            android:theme="@style/Theme.JetpackCompose" />
+        <activity
+            android:name=".selasa.latihanappnote.RegisterLayout"
+            android:exported="false"
+            android:label="@string/title_activity_register_layout"
+            android:theme="@style/Theme.JetpackCompose" />
+        <activity
+            android:name=".selasa.latihanappnote.LoginLayout"
+            android:exported="false"
+            android:label="@string/title_activity_login_layout"
+            android:theme="@style/Theme.JetpackCompose" />
+        <activity
+            android:name=".selasa.ScrollActivity"
+            android:exported="false"
+            android:label="@string/title_activity_scroll"
+            android:theme="@style/Theme.JetpackCompose" />
+        <activity
+            android:name=".selasa.RecyclerViewLayout"
+            android:exported="false"
+            android:label="@string/title_activity_recycler_view_layout"
+            android:theme="@style/Theme.JetpackCompose" />
+        <activity
+            android:name=".selasa.CardViewLayout"
+            android:exported="false"
+            android:label="@string/title_activity_card_view_layout"
+            android:theme="@style/Theme.JetpackCompose" />
+        <activity
+            android:name=".selasa.ui.theme.ScrollViewLayout"
+            android:exported="false"
+            android:label="@string/title_activity_scroll_view_layout"
+            android:theme="@style/Theme.JetpackCompose" />
+        <activity
+            android:name=".selasa.Box"
+            android:exported="false"
+            android:label="@string/title_activity_box"
+            android:theme="@style/Theme.JetpackCompose" />
+        <activity
             android:name=".latihansatu.Payment"
             android:exported="false"
             android:label="@string/title_activity_payment"

@@ -20,6 +20,11 @@ import androidx.compose.ui.unit.sp
 import waslim.binar.andlima.jetpackcompose.latihansatu.HitungK
 import waslim.binar.andlima.jetpackcompose.latihansatu.Login
 import waslim.binar.andlima.jetpackcompose.latihansatu.Payment
+import waslim.binar.andlima.jetpackcompose.selasa.CardViewLayout
+import waslim.binar.andlima.jetpackcompose.selasa.RecyclerViewLayout
+import waslim.binar.andlima.jetpackcompose.selasa.ScrollActivity
+import waslim.binar.andlima.jetpackcompose.selasa.latihanappnote.LoginLayout
+import waslim.binar.andlima.jetpackcompose.selasa.latihanappnote.RegisterLayout
 import waslim.binar.andlima.jetpackcompose.ui.theme.JetpackComposeTheme
 
 class MainActivity : ComponentActivity() {
@@ -80,6 +85,7 @@ fun Greeting(name: String) {
 
         Button(onClick = {},
             modifier = Modifier
+                .padding(start = 15.dp, end = 15.dp)
                 .border(width = 2.dp, color = Color.Black)
                 .fillMaxWidth(),
             colors = ButtonDefaults.buttonColors(Color.Green)) {
@@ -134,7 +140,62 @@ fun Greeting(name: String) {
             onValueChange = { text3 = it },
             label = { Text("Masukan Nama") }
         )
+
+        Spacer(modifier = Modifier.padding(10.dp))
+
+        Row() {
+            val mcontext = LocalContext.current
+
+            Button(onClick = {
+                mcontext.startActivity(Intent(mcontext, waslim.binar.andlima.jetpackcompose.selasa.Box::class.java))
+            }) {
+                Text(text = "box")
+            }
+
+
+            Spacer(modifier = Modifier.padding(3.dp))
+
+
+            Spacer(modifier = Modifier.padding(3.dp))
+
+            Button(onClick = {
+                mcontext.startActivity(Intent(mcontext, ScrollActivity::class.java))
+            }) {
+                Text(text = "scroll view")
+            }
+
+        }
+
+        Spacer(modifier = Modifier.padding(7.dp))
+
+        Row() {
+            val mcontext = LocalContext.current
+
+            Button(onClick = {
+                mcontext.startActivity(Intent(mcontext, CardViewLayout::class.java))
+            }) {
+                Text(text = "card view")
+            }
+
+            Spacer(modifier = Modifier.padding(3.dp))
+
+            Button(onClick = {
+                mcontext.startActivity(Intent(mcontext, RecyclerViewLayout::class.java))
+            }) {
+                Text(text = "recycler view")
+            }
+
+            Button(onClick = {
+                mcontext.startActivity(Intent(mcontext, LoginLayout::class.java))
+            }) {
+                Text(text = "Register")
+            }
+
+
+        }
     }
+
+
 }
 
 @Composable
